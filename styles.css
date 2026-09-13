@@ -404,7 +404,11 @@ p{margin:0}
 .trow{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .trow__t{display:flex;flex:0 0 auto;gap:16px;padding-right:16px;animation:scrollx 74s linear infinite}
 .trow--rev .trow__t{animation-direction:reverse;animation-duration:86s}
-.trow:hover .trow__t{animation-play-state:paused}
+/* pause au survol uniquement avec une vraie souris : sur téléphone, un simple
+   toucher laissait le défilement bloqué */
+@media (hover:hover){.trow:hover .trow__t{animation-play-state:paused}}
+/* sur téléphone, les pistes sont plus courtes : on accélère pour que ça se voie */
+@media (max-width:620px){.trow__t{animation-duration:32s}.trow--rev .trow__t{animation-duration:38s}}
 @keyframes scrollx{to{transform:translateX(-100%)}
 }
 .tcard{
