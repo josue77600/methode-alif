@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /conditions.html
+Disallow: /confidentialite.html
+Disallow: /mentions-legales.html
+
+Sitemap: https://www.methode-alif.com/sitemap.xml
