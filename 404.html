@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Redirection — Méthode Alif</title>
+<script>
+/* Les anciens liens Systeme.io (espace élève, cours, connexion, mot de passe…)
+   pointaient vers www.methode-alif.com. Systeme.io est maintenant sur
+   commande.methode-alif.com : on renvoie vers la même adresse là-bas. */
+location.replace('https://commande.methode-alif.com' + location.pathname + location.search + location.hash);
+</script>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;font:16px/1.5 system-ui,sans-serif;background:#F7F8FA;color:#0A0A0B;text-align:center;padding:24px}
+a{color:#2563EB;font-weight:600}
+</style>
+</head>
+<body>
+<p>Redirection vers ton espace élève…<br>
+<a href="https://commande.methode-alif.com/fr/login">Clique ici si rien ne se passe</a></p>
+</body>
+</html>
