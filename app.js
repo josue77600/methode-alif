@@ -174,6 +174,9 @@
   }
   var counters = $$('[data-count]');
   if (counters.length && hasIO) {
+    /* Le HTML contient la vraie valeur (lue par Google et affichée si le script ne tourne pas) :
+       on ne la remet à zéro que pour les compteurs encore hors de l'écran, qui vont s'animer. */
+    if (!reduced) counters.forEach(function (c) { if (c.getBoundingClientRect().top > window.innerHeight) c.textContent = '0'; });
     var cObs = new IntersectionObserver(function (entries, obs) {
       entries.forEach(function (e) { if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); } });
     }, { threshold: 0.5 });

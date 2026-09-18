@@ -1084,3 +1084,20 @@ p{margin:0}
   .about-shots__tag{left:8px;bottom:8px;gap:6px;padding:6px 11px;font-size:.72rem;white-space:nowrap}
   .about-shots__tag svg{width:13px;height:13px}
 }
+
+/* ============ 39. Carte de prix : avis au-dessus, option en visio verrouillée ============ */
+.price-quote{max-width:520px;margin:6px auto 22px;text-align:center}
+.price-quote__stars{color:#F5A623;letter-spacing:2px;font-size:.95rem}
+.price-quote blockquote{margin:6px 0 4px;font-size:1.08rem;font-weight:700;line-height:1.45;color:var(--ink)}
+.price-quote figcaption{font-size:.88rem;color:var(--grey)}
+.price-quote figcaption b{color:var(--ink-2)}
+
+/* dernière ligne : ce qui n'est PAS inclus, avec un cadenas plutôt qu'une croix */
+.vstack li.vstack__lock{margin-top:10px;padding:11px 12px;border:1px solid #F6CFCF;border-radius:14px;background:#FDF2F2}
+.vstack__lock .vstack__n{color:#7A2E2E;font-weight:700}
+.vstack__lock .vstack__n::before{background:#FBDADA;box-shadow:none}
+.vstack__lock .vstack__n::after{
+  left:4px;top:50%;translate:0 -50%;width:11px;height:11px;border:0;transform:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D92D20' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='11' width='16' height='10' rx='2'/%3E%3Cpath d='M8 11V7a4 4 0 0 1 8 0v4'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.vstack__lock .vstack__v{color:#B42318;background:#FEE4E2}
