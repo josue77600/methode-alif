@@ -12,6 +12,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- PostHog (statistiques, sans cookies) -->
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_m4oAm9m8c32tiQWZ7YqWjNNrg8LjRF7F36ZsCE29VwSV', {
+    api_host: 'https://eu.i.posthog.com',
+    defaults: '2026-08-30',
+    cookieless_mode: 'always'
+  })
+</script>
 </head>
 <body>
 
@@ -100,7 +109,8 @@
         Les données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles peuvent être
         transmises aux seuls prestataires nécessaires au service : l'hébergeur du site (GitHub, Inc.), la plateforme
         de vente et de formation (Systeme.io), les prestataires de paiement (Stripe et PayPal), le service d'envoi de
-        courriels et le transporteur chargé de la livraison du livre. Ces prestataires n'agissent que sur
+        courriels, l'outil de mesure d'audience (PostHog, données hébergées dans l'Union européenne) et le
+        transporteur chargé de la livraison du livre. Ces prestataires n'agissent que sur
         instruction de l'éditeur.
       </p>
       <p>
@@ -131,8 +141,9 @@
       <h2 id="cookies">8. Cookies</h2>
       <p>
         Le site utilise les cookies strictement nécessaires à son fonctionnement, notamment pour maintenir la session
-        dans l'espace membre. Des cookies de mesure d'audience peuvent être déposés afin de comprendre quelles pages
-        sont consultées ; ils ne servent pas à te profiler à des fins publicitaires.
+        dans l'espace membre. La mesure d'audience du site (PostHog) fonctionne sans cookie et sans rien enregistrer
+        dans ton navigateur : elle sert uniquement à comprendre quelles pages sont consultées, de façon anonyme, et
+        ne sert pas à te profiler à des fins publicitaires.
       </p>
       <p>Tu peux à tout moment configurer ton navigateur pour refuser les cookies ou les supprimer.</p>
 
